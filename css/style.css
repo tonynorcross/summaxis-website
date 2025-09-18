@@ -1,0 +1,174 @@
+html, body {
+  background-color: #141414;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.sticky-header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  background-color: #141414;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+.no-gutter {
+  --bs-gutter-x: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 0;
+  overflow-x: hidden;
+}
+
+.extra-big {
+  font-size: 4rem;
+}
+
+.carousel div {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+.carousel div .carousel-content-left {
+  padding: 50px 50% 50px 50px;
+  z-index: 10;
+}
+.carousel div .carousel-content-right {
+  padding: 50px 60% 50px 50px;
+  z-index: 10;
+}
+
+.demo-button {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  color: #ffffff;
+  padding: 8px 16px;
+}
+
+.demo-button-small {
+  font-size: 0.6rem;
+  padding: 6px 12px;
+  margin: 20px;
+}
+
+.demo-button-on, .demo-button:hover {
+  border-color: #FAEB6D;
+  background-color: #FAEB6D;
+  color: #141414;
+}
+
+.slick-dots li button::before {
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+}
+
+.slick-dots li button:hover::before {
+  color: #FAEB6D;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #FAEB6D;
+  opacity: 1;
+}
+
+.slick-dots {
+  margin-bottom: 40px;
+}
+
+.ticker-tape {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 150px;
+  padding-left: 100%;
+}
+.ticker-tape .ticker {
+  height: 130px;
+  line-height: 130px;
+  white-space: nowrap;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 140s;
+}
+.ticker-tape .ticker .ticker-item {
+  display: inline-block;
+  padding: 0.2rem;
+}
+.ticker-tape .ticker .ticker-item img {
+  padding: 0 20px;
+  height: 110px;
+  width: auto;
+}
+
+.ticker-tape-yellow {
+  height: 50px;
+  background-color: #FAEB6D;
+}
+.ticker-tape-yellow .ticker {
+  height: 50px;
+  line-height: 50px;
+  -webkit-animation-duration: 50s;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0); /* Start off-screen to the right */
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(-100%); /* Move off-screen to the left */
+  }
+}
+.serif {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.professional {
+  display: block;
+  width: 100%;
+  background-color: #F0F0F0;
+  padding: 0;
+  text-align: center;
+  color: #141414;
+}
+.professional h1 {
+  color: #737373;
+  margin-bottom: 0;
+}
+.professional canvas {
+  margin: 20px;
+  width: 400px;
+  height: 400px;
+  background-color: transparent;
+  border: 1px solid #dddddd;
+}
+.professional .yellow {
+  height: 50px;
+  background-color: #FAEB6D;
+}
+
+.flexed {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}/*# sourceMappingURL=style.css.map */
