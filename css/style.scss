@@ -43,20 +43,21 @@ p{
     font-size: 4rem;
 }
 
-.carousel div{
-    display: block;
-    width: 100%;
-    // padding: 40px;
-    margin: 0;
- 
+.carousel{
     .carousel-content-left{
 
+           display: block;
+    width: 100%;
+    margin: 0;
         padding: 50px 50% 50px 50px;
         z-index: 10;
     }    
     .carousel-content-right{
         padding: 50px 60% 50px 50px;
         z-index: 10;
+        display: block;
+    width: 100%;
+    margin: 0;
     }
 }
 
@@ -260,58 +261,44 @@ p{
     }
 }
 
-.jd-vance{
+.we-heard-you{
     text-align: center;
-    margin: 40px 0;
-    background:url('../images/sofa.png') no-repeat center;
+    margin: 0;
+    background:url('../images/on-sofa.png') no-repeat center;
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
+    
     
     h3{
         font-weight: 400;
         color: #141414;
         margin-top: 80px;
-        margin-bottom: 40px;
-
+        margin-bottom: 20px;
     }
-    // .auto-type{
-
-    //     margin-top: 100px;
-    //     padding: 8px 20px;
-    //     border-radius: 5px;
-    //     border: none;
-    //     width: 50%;
-    //     min-width: 360px;
-    //     font-size: 0.8rem;
-    //     color: #141414;
-        
-    //     margin-bottom: 20px;
-        
-    // }
 
        .auto-type{
 
-        position: relative;
-        background-color: #ffffff;
-        height: 40px;
-        display: inline-block;
-        margin-top: 100px;
-        padding: 8px 20px;
-        border-radius: 5px;
-        border: none;
-        width: 50%;
-        min-width: 360px;
-        
-        margin-bottom: 20px;
-        text-align: left;
-        .auto-type-content{
-            position:absolute;
-            font-size: 0.9rem;
-            display: block;
-            color: #141414;
+            position: relative;
+            background-color: #ffffff;
+            height: 40px;
+            display: inline-block;
+            margin-top: 120px;
+            padding: 8px 20px;
+            border-radius: 5px;
+            border: none;
+            width: 50%;
+            min-width: 360px;
+            
+            margin-bottom: 20px;
+            text-align: left;
+            .auto-type-content{
+                position:absolute;
+                font-size: 0.9rem;
+                display: block;
+                color: #141414;
+            }
+            
         }
-        
-    }
 }
 
 .demo-form-section{
