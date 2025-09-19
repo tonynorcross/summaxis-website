@@ -261,6 +261,12 @@ p {
 .demo-form-section {
   background: url("/images/demo-form-bg.jpg") no-repeat center;
 }
+.demo-form-section .form-holder {
+  background-color: #ffffff;
+  padding: 10px;
+  color: #141414;
+  max-width: 360px;
+}
 
 .section-features {
   text-align: center;
@@ -273,6 +279,7 @@ p {
 .section-features table td {
   min-height: 400px;
   vertical-align: middle;
+  width: 25%;
 }
 
 footer {
