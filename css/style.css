@@ -259,7 +259,7 @@ p {
 }
 
 .demo-form-section {
-  background: url("/images/demo-form-bg.jpg") no-repeat center;
+  background: url("../images/demo-form-bg.jpg") no-repeat center;
 }
 .demo-form-section .form-holder {
   background-color: #ffffff;
@@ -280,6 +280,7 @@ p {
   min-height: 400px;
   vertical-align: middle;
   width: 25%;
+  color: #737373;
 }
 
 footer {
