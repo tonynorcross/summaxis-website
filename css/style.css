@@ -107,50 +107,65 @@ p {
   margin-bottom: 40px;
 }
 
-.ticker-tape {
-  display: flex;
-  width: 100%;
+.ticker {
   overflow: hidden;
-  height: 130px;
-  padding-left: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
 }
-.ticker-tape .ticker {
-  height: 110px;
-  line-height: 110px;
-  white-space: nowrap;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-name: ticker;
-  animation-duration: 50s;
-}
-.ticker-tape .ticker .ticker-item {
-  display: inline-block;
-  padding: 0.2rem;
-}
-.ticker-tape .ticker .ticker-item img {
-  padding: 0 20px;
-  height: 90px;
-  width: auto;
-  margin: 0 20px 0 0;
+.ticker ul {
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.ticker-tape-yellow {
-  height: 50px;
+.ticker:hover ul {
+  animation-play-state: paused;
+}
+
+.ticker-logos {
+  padding-block: 12px;
+  display: flex;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0));
+          mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0));
+}
+.ticker-logos ul {
+  animation: scroll 20s linear infinite;
+}
+.ticker-logos ul img {
+  max-height: 110px;
+  padding: 0 30px;
+}
+
+.ticker-bg {
   background-color: #FAEB6D;
 }
-.ticker-tape-yellow .ticker {
-  height: 50px;
-  line-height: 50px;
-  -webkit-animation-duration: 50s;
+
+.ticker-business {
+  background-color: #FAEB6D;
+  padding-block: 8px;
+  display: flex;
+  --gap:2rem;
+  -webkit-mask-image: linear-gradient(to right, rgba(250, 235, 109, 0), rgb(250, 235, 109) 20%, rgb(250, 235, 109) 80%, rgba(250, 235, 109, 0));
+          mask-image: linear-gradient(to right, rgba(250, 235, 109, 0), rgb(250, 235, 109) 20%, rgb(250, 235, 109) 80%, rgba(250, 235, 109, 0));
+}
+.ticker-business ul {
+  gap: var(gap);
+  animation: scroll 28s linear infinite;
+  color: #141414;
+}
+.ticker-business ul li {
+  padding: 0 20px;
 }
 
-@keyframes ticker {
-  0% {
-    transform: translateX(0); /* Start off-screen to the right */
-    visibility: visible;
-  }
-  100% {
-    transform: translateX(-100%); /* Move off-screen to the left */
+@keyframes scroll {
+  to {
+    transform: translateX(-100%);
   }
 }
 .serif {

@@ -121,61 +121,93 @@ p{
     margin-bottom: 40px;
 }
 
-.ticker-tape{
 
-    display:flex;
-    width:100%;
-    overflow:hidden;
-    height:130px;
-    padding-left: 100%;
-    
-    .ticker{
-        height: 110px;
-        line-height: 110px;
-        white-space: nowrap;
+.ticker{
+    overflow: hidden;
+    user-select: none;
+    display: flex;
+    ul{
+        list-style: none;
+        flex-shrink: 0;
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
 
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-name: ticker;
-        animation-duration: 50s;
+    // ul:first-child{
+    //     background-color: orange;
+    // }
+    // ul:last-child{
+    //     background-color: pink;
+    // }
+}
 
-        .ticker-item{
-            display: inline-block;
-            padding: 0.2rem;
-            img{
-                padding: 0 20px ;
-                height: 90px;
-                width: auto;
-                margin: 0 20px 0 0;
-            }
-            
+.ticker:hover ul{
+    animation-play-state: paused;
+}
+
+
+
+.ticker-logos{
+    padding-block: 12px;
+    display: flex;
+
+ mask-image: linear-gradient(
+        to right, 
+            rgba(0,0,0,0),
+            rgba(0,0,0,1) 10%,
+            rgba(0,0,0,1) 90%,
+            rgba(0,0,0,0) 
+    );
+
+
+    ul{
+        animation: scroll 20s linear infinite;
+        img{
+            max-height: 110px;
+            padding: 0 30px;
         }
     }
 }
 
-.ticker-tape-yellow{
-    
-    height:50px;
+.ticker-bg{
     background-color: #FAEB6D;
-    .ticker{
-        height: 50px;
-        line-height: 50px;      
-        
-        -webkit-animation-duration: 50s;
+}
+
+.ticker-business{
+    background-color: #FAEB6D;
+    padding-block: 8px;
+    display: flex;
+    --gap:2rem;
+
+     mask-image: linear-gradient(
+        to right, 
+            rgba(250, 235, 109,0),
+            rgba(250, 235, 109,1) 20%,
+            rgba(250, 235, 109,1) 80%,
+            rgba(250, 235, 109,0) 
+    );
+    ul{
+        gap: var(gap);
+        animation: scroll 28s linear infinite;
+        color: #141414;
+        li{
+            padding: 0 20px ;
+        }
     }
 }
 
 
+@keyframes scroll{
+    to{
+        transform:translateX(-100%);
+    }
 
-@keyframes ticker {
-  0% {
-    transform: translateX(0); /* Start off-screen to the right */
-    visibility: visible;
-  }
-  100% {
-    transform: translateX(-100%); /* Move off-screen to the left */
-  }
 }
+
+
 
 .serif{
         font-family: Georgia, 'Times New Roman', Times, serif;
